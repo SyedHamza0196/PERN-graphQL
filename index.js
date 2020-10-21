@@ -11,6 +11,7 @@ const app = express();
 app.use(cors()); 
 
 if (process.env.NODE_ENV === "production") {
+    // serve static content
     app.use(express.static(path.join(__dirname, "client/build")));
   }
 
@@ -20,6 +21,7 @@ app.use('/graphql',graphqlHTTP({
     graphiql: true
 }));
 
+// catchall method
 app.get("*", (req,res) => {
     res.sendFile(path.join(__dirname, "client/build/index.html"))
 });

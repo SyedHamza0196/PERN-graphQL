@@ -1,8 +1,6 @@
 const graphql = require('graphql');
 const _ = require('lodash');
-const Db = require('../db')
-// const Book = require('../table/book')
-// const Author = require('../table/author')
+const Db = require('../db');
 
 const { GraphQLObjectType, 
         GraphQLString, 
