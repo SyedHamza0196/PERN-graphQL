@@ -6,15 +6,19 @@ import BookDetail from './BookDetail'
 function BookList() {
     const { loading, data } = useQuery(getBooksQuery);
 
+    // console.log("hereeeeee");
+    // const {books} = data;
+    // console.log(data.books);
     const [selected, setselected] = useState(1);
 
     if (loading){
         return <p>Loading...</p>;
-    }else {
+    }else if(data) {
+        const {books} = data;
         return (
             <div>
                 <ul id="book-list">
-                    {data.books.map(book=>(
+                    {books.map(book=>(
                         <li key={book.id} value={book.id} onClick={(e)=>{setselected(e.target.value)}}>{book.name}</li>
                     ))}
                 </ul>
