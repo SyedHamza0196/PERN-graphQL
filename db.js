@@ -1,6 +1,8 @@
 const Pool = require("pg").Pool
 require("dotenv").config()
 
+console.log("log just to push again")
+
 const devConfig = {
   user: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
