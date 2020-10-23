@@ -112,20 +112,3 @@ module.exports = new GraphQLSchema({
     query: RootQuery,
     mutation: Mutation
 });
-
-
-// dummy data
-// var books = [
-//     { name:'b1', genre:'g1', id:'1', authorId:'1'},
-//     { name:'b2', genre:'g2', id:'2', authorId:'2'},
-//     { name:'b3', genre:'g3', id:'3', authorId:'3'},
-//     { name:'b4', genre:'g4', id:'4', authorId:'2'},
-//     { name:'b5', genre:'g5', id:'5', authorId:'3'},
-//     { name:'b6', genre:'g6', id:'6', authorId:'3'}
-// ];
-
-// var authors = [ 
-//     {name:'a1', age:25, id:'1'},
-//     {name:'a2', age:25, id:'2'},
-//     {name:'a3', age:25, id:'3'}
-// ]
